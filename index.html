@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070b0e">
+  <title>LOYAL TRANSLATE</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #070b0e;
+    }
+    .shell {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(183,255,31,.08), transparent 27%),
+        #070b0e;
+    }
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #070b0e;
+    }
+    .loading {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: #b7ff1f;
+      font: 700 13px/1.4 Arial, sans-serif;
+      letter-spacing: .08em;
+      pointer-events: none;
+      transition: opacity .2s ease;
+    }
+    .loaded .loading { opacity: 0; }
+  </style>
+</head>
+<body>
+  <main class="shell" id="shell">
+    <div class="loading">LOYAL TRANSLATE</div>
+    <iframe
+      id="app"
+      src="https://script.google.com/macros/s/AKfycby8BB4INSOyelHoQj63C6tqH9EuwRFkDLdvHTnwPZKtG_CoxxpPr-JerplpRtkPb-gnzw/exec"
+      title="LOYAL TRANSLATE"
+      allow="clipboard-read; clipboard-write"
+      referrerpolicy="no-referrer"
+      onload="document.getElementById('shell').classList.add('loaded')">
+    </iframe>
+  </main>
+</body>
+</html>
